@@ -9,7 +9,7 @@ type RootState = {
 export function useToggleTodo() {
   const dispatch = useDispatch();
 
-  return (id: number) => {
+  return (id: string) => {
     dispatch(actions.toggleTodo(id));
   };
 }

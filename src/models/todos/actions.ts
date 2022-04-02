@@ -1,14 +1,13 @@
+import { v4 as uuidv4 } from 'uuid';
 import { ActionType } from './types';
-
-let nextTodoId = 0;
 
 export const addTodo = (text: string) => ({
   type: ActionType.AddTodo,
-  id: nextTodoId++,
+  id: uuidv4(),
   text,
 });
 
-export const toggleTodo = (id: number) => ({
+export const toggleTodo = (id: string) => ({
   type: ActionType.ToggleTodo,
   id,
 });

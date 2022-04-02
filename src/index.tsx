@@ -1,11 +1,14 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from '@components/App';
 import StoreProviderTodos from '@contexts/todosContext';
 
-render(
+const container = document.getElementById('root');
+
+const root = createRoot(container as unknown as Element);
+
+root.render(
   <StoreProviderTodos>
     <App />
   </StoreProviderTodos>,
-  document.getElementById('root'),
 );

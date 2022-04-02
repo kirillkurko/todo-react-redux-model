@@ -4,7 +4,7 @@ import Todo from './Todo';
 
 type Props = {
   todos: TodoType[];
-  toggleTodo: (id: number) => void;
+  toggleTodo: (id: string) => void;
 };
 
 const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => (
