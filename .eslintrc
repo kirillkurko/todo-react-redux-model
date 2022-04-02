@@ -23,5 +23,7 @@
     }
   },
   "rules": {
+    "no-plusplus": "off",
+    "default-param-last": "off"
   }
 }
