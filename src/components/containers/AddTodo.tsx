@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { useAddTodo } from '../models/todos/use';
+import { useAddTodo } from '@models/todos/use';
 
 const AddTodo = () => {
   const [value, setValue] = useState('');

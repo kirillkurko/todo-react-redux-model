@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import { VisibilityFilter } from '../models/visibilityFilter/types';
-import { useTodos, useToggleTodo } from '../models/todos/use';
-import { useVisibilityFilter } from '../models/visibilityFilter/use';
-import TodoList from '../components/TodoList';
+import { VisibilityFilter } from '@models/visibilityFilter/types';
+import { useTodos, useToggleTodo } from '@models/todos/use';
+import { useVisibilityFilter } from '@models/visibilityFilter/use';
+import TodoList from '@components/TodoList';
 
 const VisibleTodoList: React.FC = () => {
   const todos = useTodos();

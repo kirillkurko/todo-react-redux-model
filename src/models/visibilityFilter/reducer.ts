@@ -1,5 +1,5 @@
+import ActionBase from '@app-types/actionBase';
 import { VisibilityFilter, ActionType } from './types';
-import ActionBase from '../../types/actionBase';
 
 export type State = {
   visibilityFilter: VisibilityFilter;

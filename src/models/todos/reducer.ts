@@ -1,6 +1,6 @@
-import { Todo } from '../../types/todo';
+import ActionBase from '@app-types/actionBase';
+import { Todo } from '@app-types/todo';
 import { ActionType } from './types';
-import ActionBase from '../../types/actionBase';
 
 export type State = {
   todos: Todo[];

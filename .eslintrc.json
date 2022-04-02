@@ -31,5 +31,6 @@
     "@typescript-eslint/no-shadow": ["error"],
     "react/function-component-definition": "off",
     "@typescript-eslint/default-param-last": "off"
-  }
+  },
+  "ignorePatterns": ["craco.config.js"]
 }

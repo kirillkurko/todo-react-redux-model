@@ -1,10 +1,10 @@
 import React, { useCallback } from 'react';
-import { VisibilityFilter } from '../models/visibilityFilter/types';
+import { VisibilityFilter } from '@models/visibilityFilter/types';
 import {
   useSetVisibilityFilter,
   useVisibilityFilter,
-} from '../models/visibilityFilter/use';
-import Link from '../components/Link';
+} from '@models/visibilityFilter/use';
+import Link from '@components/Link';
 
 type Props = {
   filter: VisibilityFilter;
