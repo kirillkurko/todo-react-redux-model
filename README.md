@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+# React Redux Model Approach
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The idea of this project is to show the common way of creating business logic in React applications.
 
-## Available Scripts
+State Management is of the pain points of React - we have useState and Contexts, but these mechanisms 
+do not work for large applications. That's why we have libraries like Redux or MobX. Do they really solve all the problems? 
+No. They even bring new questions (and sometimes without do not answer at them). 
+To make it more convenient we have a bunch of tools like Redux Saga, Redux Toolkit, MobX State Tree and other.
+And we even have more state managers - Recoil, Jotai Atoms, Effector, Rematch and more. 
 
-In the project directory, you can run:
+But what I see in the most of the projects is that code becomes even worse with the usage of all these
+tools and libraries. Business logic is coupled with specific tools, React Components loaded by usage 
+of useDispatch and other library-specific methods.
 
-### `yarn start`
+Model Approach is designed to solve these problems separating business logic and components and decoupling 
+State Managers and React defining a simple contact between them using hooks. This approach will work
+for whatever library you will use, and it also makes it possible to migrate from one solution to 
+another without changes in your components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is created from official redux todo example (I'm using the same react components), 
+but with the model approach I suggest to use. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Project is going to grow both vertically and horizontally. 
+Later I will show how to perform api calls, run async effect and more. And with different libraries
+(I decided to start from Redux, because this library in the most popular) to show that with this approach 
+you will have the same components regardless of the library used.
