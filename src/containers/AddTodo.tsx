@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from 'react';
-import { connect } from 'react-redux';
 import { useAddTodo } from '../models/todos/use';
 
 const AddTodo = () => {
@@ -32,4 +31,4 @@ const AddTodo = () => {
   );
 };
 
-export default connect()(AddTodo);
+export default AddTodo;

@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
-import { VisibilityFilter } from '../models/todos/types';
+import { VisibilityFilter } from '../models/visibilityFilter/types';
 import {
   useSetVisibilityFilter,
   useVisibilityFilter,
-} from '../models/todos/use';
+} from '../models/visibilityFilter/use';
 import Link from '../components/Link';
 
 type Props = {

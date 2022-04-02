@@ -1,15 +1,13 @@
 import { Todo } from '../../types/todo';
-import { VisibilityFilter, ActionType } from './types';
+import { ActionType } from './types';
 import ActionBase from '../../types/actionBase';
 
 export type State = {
   todos: Todo[];
-  visibilityFilter: VisibilityFilter;
 };
 
 const initialState: State = {
   todos: [],
-  visibilityFilter: VisibilityFilter.All,
 };
 
 const reducer = (state = initialState, action: ActionBase): State => {
@@ -34,12 +32,6 @@ const reducer = (state = initialState, action: ActionBase): State => {
             ? { ...todo, completed: !todo.completed }
             : todo,
         ),
-      };
-
-    case ActionType.SetVisibilityFilter:
-      return {
-        ...state,
-        visibilityFilter: action.filter,
       };
 
     default:
