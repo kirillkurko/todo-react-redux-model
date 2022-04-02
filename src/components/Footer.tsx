@@ -1,14 +1,13 @@
-// @ts-nocheck
 import React from 'react';
 import FilterLink from '../containers/FilterLink';
-import { VisibilityFilters } from '../actions';
+import { VisibilityFilter } from '../models/todos/types';
 
 const Footer = () => (
   <div>
     <span>Show: </span>
-    <FilterLink filter={VisibilityFilters.ShowAll}>All</FilterLink>
-    <FilterLink filter={VisibilityFilters.ShowActive}>Active</FilterLink>
-    <FilterLink filter={VisibilityFilters.ShowCompleted}>Completed</FilterLink>
+    <FilterLink filter={VisibilityFilter.All}>All</FilterLink>
+    <FilterLink filter={VisibilityFilter.Active}>Active</FilterLink>
+    <FilterLink filter={VisibilityFilter.Completed}>Completed</FilterLink>
   </div>
 );
 

@@ -1,24 +1,26 @@
 import React, { useCallback, useState } from 'react';
-import { connect, useDispatch } from 'react-redux';
-import { addTodo } from '../actions';
+import { connect } from 'react-redux';
+import { useAddTodo } from '../models/todos/use';
 
 const AddTodo = () => {
-  const dispatch = useDispatch();
-
   const [value, setValue] = useState('');
+  const addTodo = useAddTodo();
 
   const handleChange = useCallback((e) => {
     setValue(e.target.value);
   }, []);
 
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
-    if (!value.trim()) {
-      return;
-    }
-    dispatch(addTodo(value));
-    setValue('');
-  }, []);
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      if (!value.trim()) {
+        return;
+      }
+      addTodo(value);
+      setValue('');
+    },
+    [value],
+  );
 
   return (
     <div>
